@@ -181,6 +181,8 @@ restart() {
     echo "Изменения из .bashrc применены."
 }
 
+alias reload='restart'
+
 e() {
     code .
 }
@@ -198,6 +200,3 @@ clear() {
 
 
 command -v zoxide &> /dev/null && eval "$(zoxide init bash)"
-
-
-echo ---12
