@@ -26,7 +26,6 @@ build_prompt() {
 }
 
 # Устанавливаем PROMPT_COMMAND — вызываем build_prompt перед каждым промптом
-PROMPT_COMMAND='build_prompt'
 # Цвета для алиасов
 export LS_COLORS='di=34:fi=00:ln=36:pi=33:so=32:bd=34;46:cd=34;43:or=31;43:mi=01;05;37:ex=35:*.cmd=35:*.exe=35:*.bat=35:*.com=35:*.dll=35:*.reg=35:*.msi=35:*.tar=31:*.tgz=31:*.arj=31:*.taz=31:*.lzh=31:*.zip=31:*.z=31:*.Z=31:*.gz=31:*.jpg=31'
 
@@ -136,9 +135,6 @@ alias kdel='kubectl delete'
 
 # Дополнительные полезные алиасы
 alias mkdir='mkdir -p'
-alias cp='cp -i'
-alias mv='mv -i'
-alias rm='rm -i'
 alias chmod='chmod --verbose'
 alias chown='chown --verbose'
 
@@ -203,3 +199,5 @@ clear() {
 
 command -v zoxide &> /dev/null && eval "$(zoxide init bash)"
 
+
+echo test
