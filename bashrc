@@ -197,6 +197,20 @@ clear() {
     printf '\033[2J\033[H'  # Очистить экран и переместить курсор в начало
 }
 
+toclip() {
+    if [ -z "$1" ]; then
+        echo "Ошибка: укажите файл." >&2
+        return 1
+    fi
+
+    if [ ! -f "$1" ]; then
+        echo "Ошибка: файл '$1' не найден." >&2
+        return 1
+    fi
+
+    cat "$1" | clip.exe
+    echo "Содержимое файла '$1' скопировано в буфер обмена."
+}
 
 
 command -v zoxide &> /dev/null && eval "$(zoxide init bash)"
